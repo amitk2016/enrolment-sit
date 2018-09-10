@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+header {
+  background: #225378;
+  padding-top: 20px; }
+
+.menubar {
+  background-color: red; }
+  .menubar ul {
+    padding: 0px;
+    margin: 0px; }
+    .menubar ul li {
+      float: left;
+      margin-left: 3px;
+      background: #1695a3;
+      list-style: none;
+      padding: 14px 20px; }
+      .menubar ul li a {
+        color: white; }
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none; }
+
+.logoHeader {
+  background: #eefcfc;
+  padding-top: 30px;
+  padding-bottom: 20px; }
+  .logoHeader__heading h1 {
+    font-size: 50px;
+    font-weight: 300;
+    color: #333; }

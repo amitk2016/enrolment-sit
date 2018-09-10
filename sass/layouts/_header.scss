@@ -1,0 +1,23 @@
+header{
+  background:$header-footer-color;
+  padding-top: 20px;
+}
+
+.menubar{
+  background-color: red;
+  ul{
+    // background: green;
+    padding: 0px;
+    margin:0px;
+    li{
+      float: left;
+      margin-left:3px;
+      background: $green;
+      list-style: none;
+      padding:14px 20px;
+      a{
+        color:white;
+      }
+    }
+  }
+}

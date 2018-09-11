@@ -6,19 +6,34 @@ header {
   background: #225378;
   padding-top: 20px; }
 
-.menubar {
-  background-color: red; }
-  .menubar ul {
-    padding: 0px;
-    margin: 0px; }
-    .menubar ul li {
-      float: left;
-      margin-left: 3px;
-      background: #1695a3;
-      list-style: none;
-      padding: 14px 20px; }
-      .menubar ul li a {
-        color: white; }
+.menubar ul {
+  padding: 0px;
+  margin: 0px; }
+  .menubar ul li {
+    float: left;
+    margin-left: 3px;
+    background: #1695a3;
+    list-style: none;
+    padding: 14px 20px; }
+    .menubar ul li a {
+      color: white; }
+
+footer {
+  background: #225378;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  color: white; }
+  footer .info {
+    font-size: 26px; }
+  footer p {
+    margin: 0; }
+  footer .logo-box {
+    padding-top: 24px; }
+  footer .info-box {
+    margin-bottom: 55px; }
+  footer h2 {
+    font-weight: 300;
+    margin-bottom: 18px; }
 
 .btn-primary-outline {
   background-color: transparent;
@@ -32,4 +47,50 @@ header {
   .logoHeader__heading h1 {
     font-size: 50px;
     font-weight: 300;
-    color: #333; }
+    color: #225378; }
+
+.main-content {
+  padding: 100px 20px; }
+  .main-content .apply {
+    border: 2px solid #1695a3;
+    padding: 10px 30px; }
+    .main-content .apply h2 {
+      margin-bottom: 20px;
+      color: #1695a3;
+      text-transform: uppercase;
+      font-weight: 300; }
+      .main-content .apply h2 span {
+        font-size: 45px; }
+    .main-content .apply .basic-info {
+      display: flex;
+      flex: 1;
+      background: #eefcfc;
+      padding: 20px;
+      margin-bottom: 20px;
+      color: #1695a3; }
+    .main-content .apply .contact-details {
+      display: flex;
+      flex: 1;
+      background: #eeeeee;
+      padding: 20px;
+      margin-bottom: 20px; }
+  .main-content .select-course {
+    border: 2px solid #1695a3;
+    padding: 10px 30px; }
+    .main-content .select-course h2 {
+      margin-bottom: 20px;
+      color: #1695a3;
+      text-transform: uppercase;
+      font-weight: 300; }
+      .main-content .select-course h2 span {
+        font-size: 45px; }
+  .main-content .finish {
+    border: 2px solid #1695a3;
+    padding: 10px 30px; }
+    .main-content .finish h2 {
+      margin-bottom: 20px;
+      color: #1695a3;
+      text-transform: uppercase;
+      font-weight: 300; }
+      .main-content .finish h2 span {
+        font-size: 45px; }

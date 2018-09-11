@@ -9,7 +9,66 @@
     h1{
       font-size: 50px;
       font-weight: 300;
-      color:#333;
+      color:$header-footer-color;
+    }
+  }
+}
+
+
+.main-content {
+  padding: 100px 20px;
+  .apply {
+    border:2px solid $green;
+    padding:10px 30px;
+    h2{
+      margin-bottom:20px;
+      color:$green;
+      text-transform: uppercase;
+      font-weight: 300;
+      span{
+        font-size:45px;
+      }
+    }
+    .basic-info {
+      display: flex;
+      flex:1;
+      background:$light-blue;
+      padding:20px;
+      margin-bottom: 20px;
+      color:$green;
+    }
+    .contact-details {
+      display: flex;
+      flex:1;
+      background:$light-grey;
+      padding:20px;
+      margin-bottom: 20px;
+    }
+  }
+  .select-course {
+    border:2px solid $green;
+    padding:10px 30px;
+    h2{
+      margin-bottom:20px;
+      color:$green;
+      text-transform: uppercase;
+      font-weight: 300;
+      span{
+        font-size:45px;
+      }
+    }
+  }
+  .finish {
+    border:2px solid $green;
+    padding:10px 30px;
+    h2{
+      margin-bottom:20px;
+      color:$green;
+      text-transform: uppercase;
+      font-weight: 300;
+      span{
+        font-size:45px;
+      }
     }
   }
 }

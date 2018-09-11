@@ -3,3 +3,16 @@
     border-color: transparent;
     box-shadow: none;
 }
+.button{
+  background: $dark-grey;
+  color:white;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  position: relative;
+
+  span{
+    position: absolute;
+    right:15px;
+    top:30%;
+  }
+}

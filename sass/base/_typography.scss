@@ -4,3 +4,46 @@
 body{
   font-family: 'Open Sans', sans-serif;
 }
+
+h1{
+  font-size: 50px;
+  font-weight: 300;
+  color:$header-footer-color;
+}
+
+
+h2{
+  margin-bottom:20px;
+  color:$green;
+  text-transform: uppercase;
+  font-weight: 300;
+  span{
+    font-size:45px;
+  }
+}
+h3{
+
+
+}
+
+p{
+  font-size:16px;
+  margin-bottom: 10px;
+  span{
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+.white{
+  color:white;
+}
+.blueandbold{
+  font-weight: 600;
+  color:$header-footer-color;
+}
+.margin-bottom-20{
+  margin-bottom:20px;
+}
+.margin-top-0{
+  margin-top: 0px;
+}

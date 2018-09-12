@@ -9,16 +9,19 @@ $(function(){
   var totalErrors = 0;
   var studentName = $('#student-name');
   var studentEmail = $('#student-email');
+  var studyBeforeRadioButton = $('input:radio[name=study-before-radio]');
+  var studySelectBox = $('.studyselectbox');
 
   // var value = studentName.val();
 
   icons.hide();
+  studySelectBox.hide();
 
 
   // Validation
-  studentName.on('keyup',validation );
+  // studentName.on('keyup',validation );
   studentName.on('blur',validation );
-  studentEmail.on('keyup',emailValidation );
+  // studentEmail.on('keyup',emailValidation );
   studentEmail.on('blur',emailValidation );
 
   function validation(){
@@ -39,6 +42,17 @@ $(function(){
       $('.email-error-icon').show();
     }
   }
+
+  console.log(studyBeforeRadioButton);
+
+  studyBeforeRadioButton.on('change',function(){
+    if ($(this).val() === 'yes') {
+      studySelectBox.show();
+    }
+    if ($(this).val() === 'no') {
+      studySelectBox.hide();
+    }
+  })
 
   basicInfoButton.on('click',show);
 

@@ -23,20 +23,24 @@
         <![endif]-->
         <header>
           <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-4">
-                  <input type="text" class="form-control"  id="txtSearch"/>
-              </div><!-- Column-4 -->
-              <div class="col-md-8">
-                <div class="menubar">
-                  <ul class="pull-right">
-                    <li><a href="#">lorem 1</a></li>
-                    <li><a href="#">lorem 2</a></li>
-                    <li><a href="#">lorem 3</a></li>
-                  </ul>
-                </div><!-- Menubar -->
-              </div><!-- Column-8 -->
-            </div><!-- Row -->
+            <div class="max-width-1240">
+              <div class="row">
+                <div class="col-md-4">
+                    <div class="header-search-box">
+                        <input type="text" class="form-control"  id="txtSearch"/><span class="glyphicon glyphicon-search search-icon">
+                    </div>
+                </div><!-- Column-4 -->
+                <div class="col-md-8">
+                  <div class="menubar">
+                    <ul class="pull-right">
+                      <li><a href="#">Lorem 1</a></li>
+                      <li><a href="#">Lorem 2</a></li>
+                      <li><a href="#">Lorem 3</a></li>
+                    </ul>
+                  </div><!-- Menubar -->
+                </div><!-- Column-8 -->
+              </div><!-- Row -->
+            </div>
           </div><!-- Container-fluid -->
         </header><!-- Header Finishes here -->
 
@@ -49,17 +53,19 @@
           </div><!-- Heading Box -->
         </section><!-- Logo Header Section here -->
 
-        <section class="main-content" >
+        <section class="main-content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-3">
               <div class="apply" >
                 <h2><span>1 </span>Apply</h2>
                 <div class="basic-info">
-                  <span><img src="img/right-arrow.svg" alt="right arrow pointing to basic info"></span>
-                  <p>basic info</p>
+                  <div class="basic-info--content">
+                    <span><img src="img/right-arrow.svg" alt="right arrow pointing to basic info"></span>
+                    <span>basic info</span>
+                  </div>
                   <label>
-                    <input type="checkbox">
+                    <input type="checkbox" class="info-checkboxes">
                   </label>
 
                 </div>
@@ -73,9 +79,11 @@
               <div class="select-course">
                 <h2><span>2 </span>Select a Course</h2>
                 <div class="select-a-course">
-                  <span><img src="img/right-arrow.svg" alt="right arrow pointing to basic info"></span>
-                  <p>contact details</p>
-                  <input type="checkbox">
+                  <div class="select__content">
+                    <span><img src="img/right-arrow.svg" alt="right arrow pointing to basic info"></span>
+                    <span>contact details</span>
+                  </div>
+                  <input type="checkbox" class="info-checkboxes">
                 </div>
               </div>
               <hr>
@@ -83,46 +91,51 @@
                 <h2><span>3 </span>Finish </h2>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="student-info form-box">
-                <h3 class="text-uppercase margin-top-0 blueandbold margin-bottom-20">Basic info</h3>
-                <div class="form-group form-inline field-box">
-                  <label for="exampleInputName2">Name</label>
-                  <input type="text" class="form-control" id="exampleInputName2" >
-                </div>
-                <div class="form-group form-inline field-box">
-                  <label for="exampleInputEmail2" class="emailLabel">Email</label>
-                  <input type="email" class="form-control" id="exampleInputEmail2" >
-                </div>
-                <div class="form-group form-inline date-field">
-                   <div id="filterDate2">
-                     <label for="date" class="date-label">Date of birth</label>
-                     <!-- Datepicker as text field -->
-                     <div class="input-group date" data-date-format="dd.mm.yyyy">
-                       <input  type="text" class="form-control" placeholder="Enter Your Birthday">
-                       <div class="input-group-addon " >
-                         <span class="glyphicon glyphicon-calendar"></span>
+            <div class="col-md-5">
+              <form class="" action="#" method="post">
+                <div class="student-info form-box">
+                  <h2 class="text-uppercase margin-top-0 blueandbold margin-bottom-20">Basic info</h2>
+                  <div class="form-group form-inline field-box">
+                    <label for="exampleInputName2">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName2">
+                    <span class="glyphicon glyphicon-ok icons ok-icon"></span>
+                    <!-- <span class="glyphicon glyphicon-remove icon error-icon"></span> -->
+                  </div>
+                  <div class="form-group form-inline field-box">
+                    <label for="exampleInputEmail2" class="emailLabel">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" >
+                    <span class="glyphicon glyphicon-remove icons error-icon"></span>
+                  </div>
+                  <div class="form-group form-inline date-field">
+                     <div id="filterDate2">
+                       <label for="date" class="date-label">Date of birth</label>
+                       <!-- Datepicker as text field -->
+                       <div class="input-group date" data-date-format="dd.mm.yyyy">
+                         <input  type="text" class="form-control" placeholder="Enter Your Birthday">
+                         <div class="input-group-addon " >
+                           <span class="glyphicon glyphicon-calendar"></span>
+                         </div>
                        </div>
-                     </div>
 
+                     </div>
                    </div>
-                 </div>
-                <div>
-                  <p>Have you studied before?</p>
-                  <input type="radio" name="confirmation" value="yes" checked> Yes<br>
-                  <p><span>Lorem ipsum dolor sit amet, consectetur.</span></p>
-                  <input type="radio" name="confirmation" value="no"> No<br>
-                  <p><span>Lorem ipsum dolor sit amet, consectetur.</span></p>
+                  <div class="padding-tb-30">
+                    <p>Have you studied before?</p>
+                    <input type="radio" name="confirmation" value="yes" checked> Yes<br>
+                    <p><span>Lorem ipsum dolor sit amet, consectetur.</span></p>
+                    <input type="radio" name="confirmation" value="no"> No<br>
+                    <p><span>Lorem ipsum dolor sit amet, consectetur.</span></p>
+                  </div>
+                  <div class="button-box">
+                    <a href="#" class="button basic-info-next-button">Next<span class="glyphicon glyphicon-play"></span></a>
+                  </div>
                 </div>
-                <div class="button-box">
-                  <a href="#" class="button">Next <span class="glyphicon glyphicon-play"></span></a>
-                </div>
-              </div>
+              </form>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2>General Information</h2>
                 <div class="step-info">
-                  <h2>Step 1 Basic Info</h2>
+                  <p class="lead blue">Step 1 Basic Info</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eum dolorem nobis culpa quaerat optio, reiciendis sunt atque dolorum numquam ipsum id omnis minima recusandae non repellat! Molestiae quod nemo numquam, explicabo quas harum quidem aliquid earum eos vel sapiente minima architecto. Et, illum reiciendis cum. Cupiditate, debitis expedita fuga.</p>
                 </div>
             </div>
@@ -131,6 +144,7 @@
       </section>
 
         <footer class="container-fluid">
+          <div class="max-width-1240">
             <div class="row">
               <div class="col-md-3 logo-box">
                 <img src="/img/logo_white.png" alt="footer-logo">
@@ -154,7 +168,8 @@
               </div>
               <p class="text-center">Copyright &copy; 2018 Southern Institute of Technology,ITS</p>
             </div>
-          </footer>
+          </div>
+        </footer>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>

@@ -8,10 +8,11 @@
 
 
 .main-content {
-  padding: 100px 20px;
+  @include max-width-1240;
+  padding: 100px 0px;
   .apply,.select-course,.finish{
     border:2px solid $green;
-    padding:10px 30px;
+    padding:10px 10px;
   }
   .apply {
 
@@ -24,8 +25,8 @@
   }
   .basic-info,.contact-details,.select-a-course{
     display: flex;
-    flex:1;
-    padding:20px;
+    justify-content: space-between;
+    padding:20px 15px;
     margin-bottom: 20px;
     color:$green;
   }
@@ -55,7 +56,7 @@
         font-weight:300;
       }
       input[type=text],input[type=email]{
-        width:40%;
+        width:80%;
         padding:5px;
         margin-left: 30px;
         border-radius: 0px;

@@ -17,13 +17,13 @@ h2{
   color:$green;
   text-transform: uppercase;
   font-weight: 300;
+  font-size:24px;
   span{
-    font-size:45px;
+    font-size:35px;
   }
 }
 h3{
-
-
+  font-size: 24px;
 }
 
 p{
@@ -33,17 +33,4 @@ p{
     font-size: 14px;
     font-style: italic;
   }
-}
-.white{
-  color:white;
-}
-.blueandbold{
-  font-weight: 600;
-  color:$header-footer-color;
-}
-.margin-bottom-20{
-  margin-bottom:20px;
-}
-.margin-top-0{
-  margin-top: 0px;
 }

@@ -1,0 +1,23 @@
+.field-box{
+  position: relative;
+
+  .icons{
+    position: absolute;
+    display: inline-block;
+    background:#eefcfc;
+    right:-1.2px;
+    top:0px;
+    color: #333;
+    transform: translateX(-25%);
+    border:none;
+  }
+  .ok-icon{
+    padding:8.8px;
+    top:1px;
+  }
+  .error-icon{
+    background-color:$warning-red;
+    padding:9.8px;
+    right:-1.9px;
+  }
+}

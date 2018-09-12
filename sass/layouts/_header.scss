@@ -1,6 +1,16 @@
 header{
   background:$header-footer-color;
   padding-top: 20px;
+
+  .header-search-box{
+    position: relative;
+  }
+  .search-icon{
+    position: absolute;
+    right:3%;
+    top:10px;
+    font-size:16px;
+  }
 }
 
 .menubar{

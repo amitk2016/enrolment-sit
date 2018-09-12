@@ -11,9 +11,13 @@ h2 {
   margin-bottom: 20px;
   color: #1695a3;
   text-transform: uppercase;
-  font-weight: 300; }
+  font-weight: 300;
+  font-size: 24px; }
   h2 span {
-    font-size: 45px; }
+    font-size: 35px; }
+
+h3 {
+  font-size: 24px; }
 
 p {
   font-size: 16px;
@@ -22,22 +26,16 @@ p {
     font-size: 14px;
     font-style: italic; }
 
-.white {
-  color: white; }
-
-.blueandbold {
-  font-weight: 600;
-  color: #225378; }
-
-.margin-bottom-20 {
-  margin-bottom: 20px; }
-
-.margin-top-0 {
-  margin-top: 0px; }
-
 header {
   background: #225378;
   padding-top: 20px; }
+  header .header-search-box {
+    position: relative; }
+  header .search-icon {
+    position: absolute;
+    right: 3%;
+    top: 10px;
+    font-size: 16px; }
 
 .menubar ul {
   padding: 0px;
@@ -76,13 +74,70 @@ footer {
 .button {
   background: #535353;
   color: white;
-  padding: 10px 40px;
+  padding: 4px 10px;
   text-transform: uppercase;
-  position: relative; }
+  display: flex;
+  justify-content: space-between;
+  width: 38%;
+  float: right;
+  font-size: 24px;
+  font-weight: 100;
+  letter-spacing: 1.2px;
+  text-decoration: none; }
   .button span {
+    font-size: 15px;
+    transform: translateY(25%);
+    text-decoration: none; }
+  .button:hover {
+    background-color: #1695a3;
+    color: white;
+    text-decoration: none; }
+
+.field-box {
+  position: relative; }
+  .field-box .icons {
     position: absolute;
-    right: 15px;
-    top: 30%; }
+    display: inline-block;
+    background: #eefcfc;
+    right: -1.2px;
+    top: 0px;
+    color: #333;
+    transform: translateX(-25%);
+    border: none; }
+  .field-box .ok-icon {
+    padding: 8.8px;
+    top: 1px; }
+  .field-box .error-icon {
+    background-color: #f18289;
+    padding: 9.8px;
+    right: -1.9px; }
+
+.max-width-1240 {
+  max-width: 1240px;
+  margin: 0 auto; }
+
+.white {
+  color: white; }
+
+.blueandbold {
+  font-weight: 600;
+  color: #225378; }
+
+.blue {
+  padding-top: 20px;
+  color: #225378; }
+
+.margin-bottom-20 {
+  margin-bottom: 20px; }
+
+.margin-top-0 {
+  margin-top: 0px; }
+
+.inline-block {
+  display: inline-block; }
+
+.padding-tb-30 {
+  padding: 30px 0px; }
 
 .logoHeader {
   background: #eefcfc;
@@ -90,18 +145,20 @@ footer {
   padding-bottom: 20px; }
 
 .main-content {
-  padding: 100px 20px; }
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 100px 0px; }
   .main-content .apply, .main-content .select-course, .main-content .finish {
     border: 2px solid #1695a3;
-    padding: 10px 30px; }
+    padding: 10px 10px; }
   .main-content .apply .basic-info {
     background: #eefcfc; }
   .main-content .apply .contact-details {
     background: #eeeeee; }
   .main-content .basic-info, .main-content .contact-details, .main-content .select-a-course {
     display: flex;
-    flex: 1;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 20px 15px;
     margin-bottom: 20px;
     color: #1695a3; }
   .main-content .select-course .select-a-course {
@@ -119,7 +176,7 @@ footer {
         font-size: 18px;
         font-weight: 300; }
       .main-content .student-info .field-box input[type=text], .main-content .student-info .field-box input[type=email] {
-        width: 40%;
+        width: 80%;
         padding: 5px;
         margin-left: 30px;
         border-radius: 0px; }

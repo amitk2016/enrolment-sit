@@ -104,13 +104,14 @@ footer {
     color: #333;
     transform: translateX(-25%);
     border: none; }
-  .field-box .ok-icon {
+  .field-box .ok-icon, .field-box .email-ok-icon {
     padding: 8.8px;
     top: 1px; }
-  .field-box .error-icon {
+  .field-box .error-icon, .field-box .email-error-icon {
     background-color: #f18289;
-    padding: 9.8px;
-    right: -1.9px; }
+    padding: 8.8px;
+    right: -1.9px;
+    top: 1px; }
 
 .max-width-1240 {
   max-width: 1240px;

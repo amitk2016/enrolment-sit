@@ -11,15 +11,28 @@ $(function(){
   var studentEmail = $('#student-email');
   var studyBeforeRadioButton = $('input:radio[name=study-before-radio]');
   var studySelectBox = $('.studyselectbox');
+  var basicinfoCheckBox = $(".basic-info-check");
+  var firstPagestudentInfo = $(".student-info");
+  var secondPageForm = $(".secondPageForm");
+  var thirdPageForm = $(".thirdPageForm");
+  var secondpageSelectInfoBox = $('.selectcourse-info');
+  var stepInfo = $('.step-info');
+  var firstPageWarning = $('.firstPageWarning');
 
   // var value = studentName.val();
 
   icons.hide();
   studySelectBox.hide();
+  secondPageForm.hide();
+  thirdPageForm.hide();
+  secondpageSelectInfoBox.hide();
+  firstPageWarning.hide();
+
+
 
 
   // Validation
-  // studentName.on('keyup',validation );
+  studentName.on('keyup',validation );
   studentName.on('blur',validation );
   // studentEmail.on('keyup',emailValidation );
   studentEmail.on('blur',emailValidation );
@@ -29,21 +42,29 @@ $(function(){
     if (namePattern.test(this.value)) {
       $('.ok-icon').show();
       $('.error-icon').hide();
+      totalErrors = 0;
     }else{
       $('.error-icon').show();
-    }
-  }
-  function emailValidation(){
-    // console.log(this.value);
-    if (emailPattern.test(this.value)) {
-      $('.email-ok-icon').show();
-      $('.email-error-icon').hide();
-    }else{
-      $('.email-error-icon').show();
+      totalErrors++;
+
     }
   }
 
-  console.log(studyBeforeRadioButton);
+
+
+  function emailValidation(){
+    if (emailPattern.test(this.value)) {
+      $('.email-ok-icon').show();
+      $('.email-error-icon').hide();
+      totalErrors = 0;
+    }else{
+      $('.email-error-icon').show();
+      totalErrors++;
+    }
+  }
+
+
+
 
   studyBeforeRadioButton.on('change',function(){
     if ($(this).val() === 'yes') {
@@ -56,10 +77,50 @@ $(function(){
 
   basicInfoButton.on('click',show);
 
+console.log(totalErrors);
+
   function show(e){
-    e.preventDefault();
+      if ( totalErrors > 0 ){
+        e.preventDefault();
+        firstPageWarning.show();
+        console.log(totalErrors);
+
+      }else{
+        e.preventDefault();
+        firstPagestudentInfo.hide();
+        secondPageForm.show();
+        stepInfo.hide();
+        secondpageSelectInfoBox.show();
+      }
+
   }
 
+  $(".secondPagePrevious").on("click", function(e) {
+    e.preventDefault();
+    firstPagestudentInfo.show();
+    secondPageForm.hide();
+    stepInfo.show();
+    secondpageSelectInfoBox.hide();
+  });
+
+  $('.secondPageNext').on('click',function(e){
+    e.preventDefault();
+    secondpageSelectInfoBox.hide();
+    secondPageForm.hide();
+    thirdPageForm.show();
+    $('.info-heading').hide();
+  });
+
+  $('.thirdPagePrevious').on('click',function(e){
+    e.preventDefault();
+    thirdPageForm.hide();
+    secondPageForm.show();
+    $('.info-heading').show();
+    secondpageSelectInfoBox.show();
+  });
+
+  // Datepick function using jquery UI
+  $('#date').datepicker();
 
 
 });

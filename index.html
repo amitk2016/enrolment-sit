@@ -9,9 +9,11 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
         <!--[if lt IE 9]>
             <script src="js/vendor/html5-3.6-respond-1.4.2.min.js"></script>
@@ -25,12 +27,12 @@
           <div class="container-fluid">
             <div class="max-width-1240">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 col-sm-6">
                     <div class="header-search-box">
                         <input type="text" class="form-control"  id="txtSearch"/><span class="glyphicon glyphicon-search search-icon">
                     </div>
                 </div><!-- Column-4 -->
-                <div class="col-md-8">
+                <div class="col-md-8 col-sm-6">
                   <div class="menubar">
                     <ul class="pull-right">
                       <li><a href="#">Lorem 1</a></li>
@@ -96,31 +98,61 @@
                 <div class="student-info form-box">
                   <h2 class="text-uppercase margin-top-0 blueandbold margin-bottom-20">Basic info</h2>
                   <div class="form-group form-inline field-box">
-                    <label for="student-name">Name</label>
-                    <input type="text" class="form-control" id="student-name">
-                    <span class="glyphicon glyphicon-ok icons ok-icon"></span>
-                    <span class="glyphicon glyphicon-remove icons error-icon"></span>
+                    <div class="row">
+                      <div class="col-md-3">
+                      <label for="student-name">Name</label>
+                      </div>
+                      <div class="col-md-9" >
+                        <div class="name-inputBox ">
+                          <input type="text" class="form-control" id="student-name" >
+                          <!-- <i class="fa fa-check icons ok-icon"></i>
+                          <i class="fa fa-times icons error-icon"></i> -->
+                          <span class="glyphicon glyphicon-ok icons ok-icon"></span>
+                          <span class="glyphicon glyphicon-remove icons error-icon"></span>
+                        </div>
+
+                      </div>
+                    </div>
+                    <!-- <label for="student-name">Name</label> -->
+
+                      <!-- <input type="text" class="form-control" id="student-name">
+                      <span class="glyphicon glyphicon-ok icons ok-icon"></span>
+                      <span class="glyphicon glyphicon-remove icons error-icon"></span> -->
+
                   </div>
+
                   <div class="form-group form-inline field-box">
-                    <label for="student-email" class="emailLabel">Email</label>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <label for="student-email" class="emailLabel">Email</label>
+                      </div>
+                      <div class="col-md-9">
+                        <input type="email" class="form-control" id="student-email" >
+                        <span class="glyphicon glyphicon-ok icons email-ok-icon"></span>
+                        <span class="glyphicon glyphicon-remove icons email-error-icon"></span>
+                      </div>
+                    </div>
+
+                    <!-- <label for="student-email" class="emailLabel">Email</label>
                     <input type="email" class="form-control" id="student-email" >
                     <span class="glyphicon glyphicon-ok icons email-ok-icon"></span>
-                    <span class="glyphicon glyphicon-remove icons email-error-icon"></span>
+                    <span class="glyphicon glyphicon-remove icons email-error-icon"></span> -->
                     <!-- <span class="glyphicon glyphicon-remove icons error-icon"></span> -->
                   </div>
-                  <div class="form-group form-inline date-field">
-                     <div id="filterDate2">
-                       <label for="date" class="date-label">Date of birth</label>
-                       <!-- Datepicker as text field -->
-                       <div class="input-group date" data-date-format="dd.mm.yyyy">
-                         <input  type="text" class="form-control" placeholder="Enter Your Birthday">
-                         <div class="input-group-addon " >
-                           <span class="glyphicon glyphicon-calendar"></span>
+
+                   <div class="form-group dateBox"> <!-- Date input -->
+                     <div class="row">
+                       <div class="col-md-3">
+                         <label class="control-label" for="date">Date of birth</label>
+                       </div>
+                       <div class="col-md-9">
+                         <div class="dateBox__input" data-provide="datepicker" id='datetimepicker1'>
+                           <input class="form-control datepicker" id="date" name="date" placeholder="MM/DD/YYY" type="text"/>
+                            <i class="far fa-calendar dateBox__icon"></i>
                          </div>
                        </div>
-
                      </div>
-                   </div>
+                  </div>
                   <div class="padding-tb-30">
                     <p>Have you studied before?</p>
                     <input type="radio" name="study-before-radio" value="yes" > Yes<br>
@@ -138,16 +170,59 @@
                       <option>Sample Course 5</option>
                     </select>
                   </div>
+                  <div class="firstPageWarning">
+                    Please fill all the required fields
+                  </div>
                   <div class="button-box">
-                    <a href="#" class="button basic-info-next-button">Next<span class="glyphicon glyphicon-play"></span></a>
+                    <a href="#" class="button basic-info-next-button">Next<i class="fas fa-1x fa-caret-right"></i></a>
+                  </div>
+
+
+                </div>
+                <div class="secondPageForm">
+                  <h2 class="text-uppercase margin-top-0 blueandbold margin-bottom-20">Select a Course</h2>
+                  <div class="secondPageSelect margin-bottom-30">
+                    <select class="form-control" id="select-box">
+                      <option>Sample Course 1</option>
+                      <option>Sample Course 2</option>
+                      <option>Sample Course 3</option>
+                      <option>Sample Course 4</option>
+                      <option>Sample Course 5</option>
+                    </select>
+                  </div>
+                  <div class="secondPageForm__buttons">
+                    <a href="#" class="button second-page-previous-button secondPagePrevious"><i class="fas fa-1x fa-caret-left"></i>Previous</a>
+                    <a href="#" class="button second-page-next-button secondPageNext">Next<i class="fas fa-1x fa-caret-right"></i></a>
+                  </div>
+                  <div class="display">
+                    <h2></h2>
+                  </div>
+                </div>
+                <div class="thirdPageForm">
+                  <h2 class="text-uppercase margin-top-0 blueandbold margin-bottom-20">Summary</h2>
+                  <div class="summaryBox margin-bottom-30">
+                      <p>Alison Smith</p>
+                      <br>
+                      <p>Email: alisonsmith@gmail.com</p>
+                      <p>Date of birth: 01 Nov 2000</p>
+                      <p>Study history: Sample Course 4</p>
+                      <p>Selected Course : Sample Course 5</p>
+                  </div>
+                  <div class="thirdPageForm__buttons">
+                    <a href="#" class="button third-page-previous-button thirdPagePrevious"><i class="fas fa-1x fa-caret-left"></i>Previous</a>
+                    <a href="#" class="button third-page-next-button thirdPageNext">Submit<i class="fas fa-1x fa-caret-right"></i></a>
                   </div>
                 </div>
               </form>
             </div>
             <div class="col-md-4">
-                <h2>General Information</h2>
+                <h2 class="info-heading">General Information</h2>
                 <div class="step-info">
                   <p class="lead blue">Step 1 Basic Info</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eum dolorem nobis culpa quaerat optio, reiciendis sunt atque dolorum numquam ipsum id omnis minima recusandae non repellat! Molestiae quod nemo numquam, explicabo quas harum quidem aliquid earum eos vel sapiente minima architecto. Et, illum reiciendis cum. Cupiditate, debitis expedita fuga.</p>
+                </div>
+                <div class="selectcourse-info">
+                  <p class="lead blue">Step 2 Select a Course</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eum dolorem nobis culpa quaerat optio, reiciendis sunt atque dolorum numquam ipsum id omnis minima recusandae non repellat! Molestiae quod nemo numquam, explicabo quas harum quidem aliquid earum eos vel sapiente minima architecto. Et, illum reiciendis cum. Cupiditate, debitis expedita fuga.</p>
                 </div>
             </div>
@@ -183,6 +258,7 @@
           </div>
         </footer>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/main.js"></script>
     </body>
